@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+.wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+nav ul{
+    display: flex;
+}
+
+nav ul li a{
+    color: black;
+    line-height: 50px;
+    font-size: 14px;
+    padding: 6px 13px;
+    transition: .4s all ease-out;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    background-color: #F4C6D4;
+    transition: .4s all ease-out;
+    color: whitesmoke;
+}
+
+.text {
+    width: 70%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    padding: 30px; /* Tambahkan padding untuk memberi ruang di sekitar konten */
+    border-radius: 90px;
+    stroke: black;
+    padding-top: 100px;
+
+    
+}
+
+.text h1 {
+    font-size: 4vw; /* Menggunakan ukuran font responsif menggunakan vw (viewport width) */
+    font-family: "Raleway", sans-serif;
+    margin: 10px 0px;
+}
+
+.primeiroTexto {
+    border-left: 4px solid #F4C6D4;
+    padding-left: 15px;
+    transform: translateX(-15px);
+}
+
+span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+    padding-right: 65%;
+    padding-bottom: 20%;
+  }
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "REBAHAN KUY!";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+.corner-image {
+    position: absolute;
+    top: 150px;
+    left: 79%;
+    transform: translateX(-50%);
+    width: 100%; /* Menggunakan lebar 100% untuk responsivitas */
+    height: auto;
+    max-width: 450px; /* Menetapkan lebar maksimum gambar */
+}
+
+/* Media query untuk layar dengan lebar kurang dari atau sama dengan 768px */
+@media only screen and (max-width: 768px) {
+    .text {
+        width: 100%; /* Mengisi seluruh lebar pada layar kecil */
+    }
+
+    .text h1 {
+        font-size: 6vw; /* Mengubah ukuran font untuk layar kecil */
+    }
+
+    .corner-image {
+        display: none; /* Sembunyikan gambar pada layar kecil jika diperlukan */
+    }
+}
